@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Fondo naranja con esquinas redondeadas -->
+  <rect width="1024" height="1024" rx="200" ry="200" fill="#FF6B35"/>
+
+  <!-- Gradiente sutil -->
+  <defs>
+    <radialGradient id="bg" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FF8C5A"/>
+      <stop offset="100%" stop-color="#E05020"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="200" ry="200" fill="url(#bg)"/>
+
+  <!-- Huella de perro (pata) centrada, color blanco semitransparente -->
+  <g fill="rgba(255,255,255,0.95)" transform="translate(512,512)">
+
+    <!-- Almohadilla central (grande, forma de corazón invertido) -->
+    <ellipse cx="0" cy="80" rx="130" ry="105"/>
+    <!-- Muesca del corazón -->
+    <ellipse cx="-52" cy="30" rx="72" ry="80"/>
+    <ellipse cx="52"  cy="30" rx="72" ry="80"/>
+
+    <!-- Dedo 1 (izquierda exterior) -->
+    <ellipse cx="-195" cy="-80" rx="58" ry="75" transform="rotate(-22,-195,-80)"/>
+
+    <!-- Dedo 2 (izquierda interior) -->
+    <ellipse cx="-75"  cy="-155" rx="58" ry="75" transform="rotate(-8,-75,-155)"/>
+
+    <!-- Dedo 3 (derecha interior) -->
+    <ellipse cx="75"   cy="-155" rx="58" ry="75" transform="rotate(8,75,-155)"/>
+
+    <!-- Dedo 4 (derecha exterior) -->
+    <ellipse cx="195"  cy="-80"  rx="58" ry="75" transform="rotate(22,195,-80)"/>
+  </g>
+</svg>

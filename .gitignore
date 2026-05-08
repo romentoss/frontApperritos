@@ -1,41 +1,53 @@
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-# dependencies
+# ─── Variables de entorno (NUNCA subir a Git) ────────────────
+.env
+.env.*
+!.env.example
+*.env
+
+# ─── Credenciales Firebase / Google ─────────────────────────
+google-services.json
+GoogleService-Info.plist
+google-credentials.json
+
+# ─── Dependencias ───────────────────────────────────────────
 node_modules/
 
-# Expo
+# ─── Expo ───────────────────────────────────────────────────
 .expo/
 dist/
 web-build/
 expo-env.d.ts
 
-# Native
-.kotlin/
+# ─── Builds nativos generados ────────────────────────────────
+/ios
+/android
+
+# ─── Certificados y claves de firma ─────────────────────────
 *.orig.*
 *.jks
 *.p8
 *.p12
 *.key
 *.mobileprovision
+*.keystore
 
-# Metro
+# ─── Metro bundler ──────────────────────────────────────────
 .metro-health-check*
 
-# debug
+# ─── Debug / logs ───────────────────────────────────────────
 npm-debug.*
 yarn-debug.*
 yarn-error.*
+*.log
 
-# macOS
+# ─── macOS ──────────────────────────────────────────────────
 .DS_Store
 *.pem
 
-# local env files
-.env*.local
-
-# typescript
+# ─── TypeScript ─────────────────────────────────────────────
 *.tsbuildinfo
 
-# generated native folders
-/ios
-/android
+# ─── EAS / Expo secrets ─────────────────────────────────────
+.easignore
