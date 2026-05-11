@@ -5,9 +5,25 @@
 
 const { expo } = require("./app.json");
 
+// IDs de AdMob: usa los reales desde .env, o los de prueba como fallback
+const admobAndroidAppId =
+  process.env.ADMOB_ANDROID_APP_ID || "ca-app-pub-3940256099942544~3347511713";
+const admobIosAppId =
+  process.env.ADMOB_IOS_APP_ID || "ca-app-pub-3940256099942544~1458002511";
+
 module.exports = {
   expo: {
     ...expo,
+    plugins: [
+      ...(expo.plugins || []),
+      [
+        "react-native-google-mobile-ads",
+        {
+          androidAppId: admobAndroidAppId,
+          iosAppId: admobIosAppId,
+        },
+      ],
+    ],
     ios: {
       ...expo.ios,
       config: {
