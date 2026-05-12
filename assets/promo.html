@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <!--
+    GRÁFICO PROMOCIONAL PLAY STORE — 1024 × 500 px
+    ─────────────────────────────────────────────
+    Cómo capturarlo en Chrome:
+      1. Abre este archivo en Chrome (File → Open File)
+      2. F12 → icono de "Toggle device toolbar" (Ctrl+Shift+M)
+      3. Escribe 1024 × 500 en los campos de dimensiones
+      4. Haz clic en ⋮ → "Capture screenshot"
+      5. Se descargará exactamente a 1024×500 px.
+  -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width:  1024px;
+      height:  500px;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #E8633A 0%, #D44E28 55%, #B83D1E 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 72px;
+      color: #fff;
+    }
+
+    /* ── Paw decorativas de fondo ── */
+    .bg-paw {
+      position: absolute;
+      font-size: 220px;
+      opacity: 0.07;
+      pointer-events: none;
+      user-select: none;
+    }
+    .bg-paw.top-left  { top: -40px;  left: -20px; transform: rotate(-20deg); }
+    .bg-paw.bot-right { bottom: -50px; right: -20px; transform: rotate(15deg); }
+    .bg-paw.mid       { top: 40px;  right: 220px; font-size: 140px; opacity: 0.05; transform: rotate(30deg); }
+
+    /* ── Columna izquierda ── */
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-width: 520px;
+    }
+
+    .app-name {
+      font-size: 72px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1;
+      text-shadow: 0 3px 12px rgba(0,0,0,.25);
+    }
+
+    .tagline {
+      font-size: 22px;
+      font-weight: 400;
+      opacity: 0.92;
+      line-height: 1.4;
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .feat {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .feat-icon {
+      font-size: 22px;
+      width: 32px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    /* ── Columna derecha: icono ── */
+    .right {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .icon-wrap {
+      width: 220px;
+      height: 220px;
+      border-radius: 48px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      box-shadow:
+        0 24px 60px rgba(0,0,0,.30),
+        inset 0 1px 0 rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .icon-wrap img {
+      width: 200px;
+      height: 200px;
+      border-radius: 40px;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.20);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Patas decorativas de fondo -->
+  <span class="bg-paw top-left">🐾</span>
+  <span class="bg-paw bot-right">🐾</span>
+  <span class="bg-paw mid">🐾</span>
+
+  <!-- Columna izquierda -->
+  <div class="left">
+    <div class="app-name">Apperritos</div>
+    <div class="tagline">Todo lo que tu mascota necesita,<br>en un solo lugar.</div>
+    <div class="features">
+      <div class="feat"><span class="feat-icon">💉</span> Vacunas y citas al día</div>
+      <div class="feat"><span class="feat-icon">🍖</span> Control de alimentación</div>
+      <div class="feat"><span class="feat-icon">🐕</span> Registro completo de tus mascotas</div>
+      <div class="feat"><span class="feat-icon">🗺️</span> Zonas y paseos favoritos</div>
+    </div>
+  </div>
+
+  <!-- Columna derecha -->
+  <div class="right">
+    <div class="icon-wrap">
+      <!-- Referencia relativa al archivo icon.png en la misma carpeta -->
+      <img src="icon.png" alt="Apperritos" />
+    </div>
+    <div class="badge">Disponible en Google Play</div>
+  </div>
+
+</body>
+</html>
